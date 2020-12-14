@@ -10,11 +10,15 @@
       </div>
       <h3>Current Track:</h3>
       <p>{{ radio.current.name }}
-        <br/> by {{ radio.current.metadata.artist_name }}
+        <br/><span v-if="metadata.artist_name.length"> by {{ metadata.artist_name }}</span>
         <br/>
-        <em>({{ radio.current.metadata.album_title }})</em></p>
+        <em v-if="metadata.album_title.length">({{ metadata.album_title }})</em></p>
     <p>
-    <audio controls src="http://wrfl.ddns.net:8000/_a"></audio>
+    <!-- <audio controls src="http://wrfl.ddns.net:8000/_a"></audio> -->
+    <audio width="300" height="32" controls="controls">
+      <source src="http://wrfl.ddns.net:8000/_b" type="audio/mpeg" />
+      <source src="http://wrfl.ddns.net:8000/_a" type="audio/ogg" />
+    </audio>
     </p>
   </div>
 </template>
@@ -37,12 +41,19 @@ export default {
       }
     }
   },
+  computed: {
+    // a computed getter
+    metadata: function () {
+      // `this` points to the vm instance
+      return ( typeof(this.radio.current.metadata) != "undefined" ) ? this.radio.current.metadata : { artist_name: '', album_title: '' };
+    }
+  },
   methods: {
+
   },
   mounted: function () {
     //Initial Load
-    // this.loadData();
-    //Run every 30 seconds
+    //Run every 5 seconds
     var that = this
     var loadData = function(){
         fetch("http://wrfl.ddns.net/api/live-info")
@@ -53,7 +64,7 @@ export default {
         // Do stuff
         setTimeout(loadData, 5000);
     };
-    setTimeout(loadData,5000);
+    setTimeout(loadData, 1000);
   }
 }
 </script>
@@ -66,5 +77,10 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+#app img {
+  max-width: 100%;
+  height: auto;
 }
 </style>
