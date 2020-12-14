@@ -4269,6 +4269,11 @@ hosted-git-info@^2.1.4:
   resolved "https://registry.npm.taobao.org/hosted-git-info/download/hosted-git-info-2.8.8.tgz?cache=0&sync_timestamp=1602801621846&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fhosted-git-info%2Fdownload%2Fhosted-git-info-2.8.8.tgz#7539bd4bc1e0e0a895815a2e0262420b12858488"
   integrity sha1-dTm9S8Hg4KiVgVouAmJCCxKFhIg=
 
+howler@^2.1.2:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/howler/-/howler-2.2.1.tgz#a521a9b495841e8bb9aa12e651bebba0affc179e"
+  integrity sha512-0iIXvuBO/81CcrQ/HSSweYmbT50fT2mIc9XMFb+kxIfk2pW/iKzDbX1n3fZmDXMEIpYvyyfrB+gXwPYSDqUxIQ==
+
 hpack.js@^2.1.6:
   version "2.1.6"
   resolved "https://registry.npm.taobao.org/hpack.js/download/hpack.js-2.1.6.tgz#87774c0949e513f42e84575b3c45681fade2a0b2"
@@ -8087,6 +8092,14 @@ vm-browserify@^1.0.1:
   resolved "https://registry.npm.taobao.org/vm-browserify/download/vm-browserify-1.1.2.tgz#78641c488b8e6ca91a75f511e7a3b32a86e5dda0"
   integrity sha1-eGQcSIuObKkadfUR56OzKobl3aA=
 
+vue-audio-better@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/vue-audio-better/-/vue-audio-better-3.0.1.tgz#c9e2ad448e5dfa2eb76895b410a2777c7dc79b8f"
+  integrity sha512-rr0cItOgMHYOLy7VvIHowWGqm+qLcCpj4BZ+4saAHQCSwGcV8TTCefLyGpdIjlJtqL8ytBjjtObft6WSkQoAKQ==
+  dependencies:
+    howler "^2.1.2"
+    vue "^2.6.10"
+
 vue-eslint-parser@^7.0.0:
   version "7.2.0"
   resolved "https://registry.npm.taobao.org/vue-eslint-parser/download/vue-eslint-parser-7.2.0.tgz?cache=0&sync_timestamp=1606963523314&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fvue-eslint-parser%2Fdownload%2Fvue-eslint-parser-7.2.0.tgz#1e17ae94ca71e617025e05143c8ac5593aacb6ef"
@@ -8145,7 +8158,7 @@ vue-template-es2015-compiler@^1.9.0:
   resolved "https://registry.npm.taobao.org/vue-template-es2015-compiler/download/vue-template-es2015-compiler-1.9.1.tgz#1ee3bc9a16ecbf5118be334bb15f9c46f82f5825"
   integrity sha1-HuO8mhbsv1EYvjNLsV+cRvgvWCU=
 
-vue@^2.6.11:
+vue@^2.6.10, vue@^2.6.11:
   version "2.6.12"
   resolved "https://registry.npm.taobao.org/vue/download/vue-2.6.12.tgz?cache=0&sync_timestamp=1606947891040&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fvue%2Fdownload%2Fvue-2.6.12.tgz#f5ebd4fa6bd2869403e29a896aed4904456c9123"
   integrity sha1-9evU+mvShpQD4pqJau1JBEVskSM=
