@@ -23,7 +23,7 @@
     <div v-else>
       <h1>Oops!</h1>
       <p>Radio Free Lambertville isn't sending anything secure over the interwebs, so we are only broadcasting from HTTP (not HTTPS).</p>
-      <p>Just click here and you'll be good: <a href="http://radiofreelambertville.com">http://radiofreelambertville.com</a></p>
+      <p>Don't panic, just click here and you'll be good: <a href="http://radiofreelambertville.com">http://radiofreelambertville.com</a></p>
     </div>
   </div>
 </template>
