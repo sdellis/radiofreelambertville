@@ -13,8 +13,10 @@
       <p>
       <!-- <audio controls src="http://wrfl.ddns.net:8000/_a"></audio> -->
       <audio width="300" height="32" controls="controls">
-        <source src="http://wrfl.ddns.net:8000/_a" type="audio/mpeg" />
-        <source src="http://wrfl.ddns.net:8000/_b" type="audio/ogg" />
+        <source src="http://73.194.146.151:8000/_a" type="audio/mpeg" />
+        <source src="http://73.194.146.151:8000/_b" type="audio/ogg" />
+        <!-- <source src="http://wrfl.ddns.net:8000/_a" type="audio/mpeg" />
+        <source src="http://wrfl.ddns.net:8000/_b" type="audio/ogg" /> -->
       </audio>
       </p>
     </div>
@@ -69,7 +71,9 @@ export default {
     //Run every 5 seconds
     var that = this
     var loadData = function(){
-        fetch("http://wrfl.ddns.net/api/live-info")
+
+        fetch("http://73.194.146.151/api/live-info")
+        // fetch("http://wrfl.ddns.net/api/live-info")
         .then(response => response.json())
         .then(radio => (
           that.radio = radio
